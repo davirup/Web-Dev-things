@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    
+</head>
+<body>
+    
+    <h1>Hello There!!</h1>
+
+    <script>
+        var h1 = document.querySelector("h1");
+        var text = h1.innerText.split('');
+        let html = "";
+
+        text.forEach(letters => {
+            let classes = ''
+            if(letters !== ' '){
+                classes = 'letter'
+            }
+            html = html + `<span class = ${letter}>${letters}</span>`
+        })
+        h1.innerHTML = html;
+
+        var letter = document.querySelectorAll(".letter");
+        letter.forEach( node=> {
+            node.addEventListener('mouseover', function(event) {
+                console.log(this.innerText)
+            })
+
+            node.addEventListener('mouseout', function(event){
+                console.log('out')
+            })
+        })
+
+        
+        
+
+    </script>
+
+
+</body>
+</html>
